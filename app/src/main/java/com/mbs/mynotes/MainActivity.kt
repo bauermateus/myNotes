@@ -25,19 +25,25 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
+        recyclerView.adapter = adapter
 
         observe()
-
         binding.addButton.setOnClickListener{
             startActivity(Intent(applicationContext, InsertActivity::class.java))
         }
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        adapter.notifyDataSetChanged()
+    }
+
     fun observe() {
-        viewModel.notes.observe(this, {
+        viewModel.notes.observe(this
+        ) {
             adapter.updatedNotes(it)
         }
-        )
     }
+
 }

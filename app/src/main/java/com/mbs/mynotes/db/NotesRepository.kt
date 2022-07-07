@@ -1,10 +1,11 @@
 package com.mbs.mynotes.db
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
-import com.mbs.mynotes.model.RecyclerListModel
+import com.mbs.mynotes.model.NotesModel
 
-class NotesRepository private constructor(context: Context) {
+class NotesRepository private constructor(private val context: Context) {
 
     private val notesDataBase = NotesDataBase(context)
 
@@ -20,8 +21,8 @@ class NotesRepository private constructor(context: Context) {
         }
     }
 
-    fun insert(note: RecyclerListModel): Boolean {
-        val list = mutableListOf<RecyclerListModel>()
+    fun insert(note: NotesModel): Boolean {
+        val list = mutableListOf<NotesModel>()
         return try {
             val db = notesDataBase.writableDatabase
 
@@ -47,12 +48,14 @@ class NotesRepository private constructor(context: Context) {
         }
     }
 
-    fun getNotes(): List<RecyclerListModel> {
-        val list = mutableListOf<RecyclerListModel>()
+    @SuppressLint("Range")
+    fun getNotes(): List<NotesModel> {
+        val list = mutableListOf<NotesModel>()
         try {
             val db = notesDataBase.readableDatabase
 
-            val projection = arrayOf(DataBaseConstants.TITLE, DataBaseConstants.CONTENT)
+            val projection =
+                arrayOf(DataBaseConstants.ID, DataBaseConstants.TITLE, DataBaseConstants.CONTENT)
 
             val cursor = db.query(DataBaseConstants.TABLE_NAME, projection,
                 null, null, null, null, null)
@@ -61,7 +64,7 @@ class NotesRepository private constructor(context: Context) {
                     val id = cursor.getInt(cursor.getColumnIndex(DataBaseConstants.ID))
                     val title = cursor.getString(cursor.getColumnIndex(DataBaseConstants.TITLE))
                     val content = cursor.getString(cursor.getColumnIndex(DataBaseConstants.CONTENT))
-                    list.add(RecyclerListModel(id, title, content))
+                    list.add(NotesModel(id, title, content))
                 }
             }
             cursor.close()

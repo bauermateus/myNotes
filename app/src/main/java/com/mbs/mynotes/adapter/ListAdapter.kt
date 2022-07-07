@@ -3,14 +3,14 @@ package com.mbs.mynotes.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.mbs.mynotes.R
-import com.mbs.mynotes.model.RecyclerListModel
+import com.mbs.mynotes.model.NotesModel
+import kotlinx.android.synthetic.main.recycler_content.view.*
 
-class ListAdapter(val context: Context)
+class ListAdapter(private val context: Context)
     : RecyclerView.Adapter<NotesViewHolder>() {
-    private var notes: List<RecyclerListModel> = listOf()
+    private var notes: List<NotesModel> = listOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotesViewHolder {
         val itemList = LayoutInflater.from(context)
@@ -26,7 +26,7 @@ class ListAdapter(val context: Context)
     override fun getItemCount(): Int {
             return notes.size
     }
-    fun updatedNotes(list: List<RecyclerListModel>) {
+    fun updatedNotes(list: List<NotesModel>) {
         notes = list
         notifyDataSetChanged()
     }

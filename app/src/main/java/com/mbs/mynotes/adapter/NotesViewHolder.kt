@@ -1,7 +1,6 @@
 package com.mbs.mynotes.adapter
 
 import android.view.View
-import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.mbs.mynotes.R
