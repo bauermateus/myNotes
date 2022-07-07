@@ -1,5 +1,6 @@
 package com.mbs.mynotes
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -26,6 +27,10 @@ class MainActivity : AppCompatActivity() {
         recyclerView.setHasFixedSize(true)
 
         observe()
+
+        binding.addButton.setOnClickListener{
+            startActivity(Intent(applicationContext, InsertActivity::class.java))
+        }
 
     }
 

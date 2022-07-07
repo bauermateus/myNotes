@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/layout/activity_insert.xml" value="0.10299145299145299" />
+        <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.14" />
+        <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/layout/activity_insert.xml" value="0.22" />
         <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/layout/recycler_content.xml" value="0.25" />
       </map>
