@@ -36,6 +36,28 @@ class NotesRepository private constructor(private val context: Context) {
         }
     }
 
+    fun update(note: NotesModel): Boolean {
+        return try {
+
+            val db = notesDataBase.writableDatabase
+
+            val values = ContentValues()
+            values.put(DataBaseConstants.TITLE, note.title)
+            values.put(DataBaseConstants.CONTENT, note.content)
+
+            val selection = DataBaseConstants.ID + " = args"
+            //"args" será substituido pelo valor da val args. então o código literal ficaria "id = args"
+
+            val args = arrayOf(note.id.toString())
+
+            db.update(DataBaseConstants.TABLE_NAME, values, selection, args)
+
+            true
+        } catch (exception: Exception) {
+            false
+        }
+    }
+
     fun delete(id: Int): Boolean {
         return try {
             val db = notesDataBase.writableDatabase
@@ -49,7 +71,7 @@ class NotesRepository private constructor(private val context: Context) {
     }
 
     @SuppressLint("Range")
-    fun getNotes(): List<NotesModel> {
+    fun getAllNotes(): List<NotesModel> {
         val list = mutableListOf<NotesModel>()
         try {
             val db = notesDataBase.readableDatabase

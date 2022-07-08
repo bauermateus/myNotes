@@ -30,4 +30,7 @@ class ListAdapter(private val context: Context)
         notes = list
         notifyDataSetChanged()
     }
+    fun getId() {
+        holder
+    }
 }

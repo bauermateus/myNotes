@@ -2,6 +2,7 @@ package com.mbs.mynotes
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,28 +22,39 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        viewModel.getNotes()
+        viewModel.getAllNotes()
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
 
         observe()
-        binding.addButton.setOnClickListener{
-            startActivity(Intent(applicationContext, InsertActivity::class.java))
-        }
+
+        setAddButtonOnClickListener()
+
+        setEditNoteOnClickListener()
 
     }
 
     override fun onResume() {
         super.onResume()
-        adapter.notifyDataSetChanged()
+        viewModel.getAllNotes()
     }
 
     fun observe() {
         viewModel.notes.observe(this
         ) {
             adapter.updatedNotes(it)
+        }
+    }
+    private fun setAddButtonOnClickListener() {
+        binding.addButton.setOnClickListener{
+            startActivity(Intent(applicationContext, InsertActivity::class.java))
+        }
+    }
+    private fun setEditNoteOnClickListener() {
+        findViewById<View>(R.id.note_body).setOnClickListener {
+            startActivity(Intent(applicationContext, InsertActivity::class.java))
         }
     }
 
