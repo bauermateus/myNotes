@@ -22,7 +22,6 @@ class NotesRepository private constructor(private val context: Context) {
     }
 
     fun insert(note: NotesModel): Boolean {
-        val list = mutableListOf<NotesModel>()
         return try {
             val db = notesDataBase.writableDatabase
 
@@ -45,7 +44,7 @@ class NotesRepository private constructor(private val context: Context) {
             values.put(DataBaseConstants.TITLE, note.title)
             values.put(DataBaseConstants.CONTENT, note.content)
 
-            val selection = DataBaseConstants.ID + " = args"
+            val selection = DataBaseConstants.ID + " = ?"
             //"args" será substituido pelo valor da val args. então o código literal ficaria "id = args"
 
             val args = arrayOf(note.id.toString())
@@ -61,7 +60,7 @@ class NotesRepository private constructor(private val context: Context) {
     fun delete(id: Int): Boolean {
         return try {
             val db = notesDataBase.writableDatabase
-            val selection = DataBaseConstants.ID + " = args"
+            val selection = DataBaseConstants.ID + " = ?"
             val args = arrayOf(id.toString())
             db.delete(DataBaseConstants.TABLE_NAME, selection, args)
             true
@@ -94,5 +93,33 @@ class NotesRepository private constructor(private val context: Context) {
             return list
         }
         return list
+    }
+
+    @SuppressLint("Range")
+    fun getNote(id: Int): NotesModel? {
+        var note: NotesModel? = null
+        try {
+            val db = notesDataBase.readableDatabase
+
+            val projection =
+                arrayOf(DataBaseConstants.ID, DataBaseConstants.TITLE, DataBaseConstants.CONTENT)
+
+            val selection = DataBaseConstants.ID + " = ?"
+            val args = arrayOf(id.toString())
+
+            val cursor = db.query(DataBaseConstants.TABLE_NAME, projection,
+                selection, args, null, null, null)
+            if (cursor != null && cursor.count > 0) {
+                while (cursor.moveToNext()) {
+                    val title = cursor.getString(cursor.getColumnIndex(DataBaseConstants.TITLE))
+                    val content = cursor.getString(cursor.getColumnIndex(DataBaseConstants.CONTENT))
+                    note = NotesModel(id, title, content)
+                }
+            }
+            cursor.close()
+        } catch (e: Exception) {
+            return note
+        }
+        return note
     }
 }

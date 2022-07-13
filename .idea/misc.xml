@@ -4,9 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.14" />
-        <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/layout/activity_insert.xml" value="0.22" />
+        <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/layout-v26/activity_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/layout/activity_insert.xml" value="0.25" />
         <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/layout/hhh.xml" value="0.2230769230769231" />
+        <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/layout/main_support_action_bar.xml" value="0.22393162393162394" />
         <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/layout/recycler_content.xml" value="0.25" />
+        <entry key="..\:/Users/Mateus Bauer/AndroidStudioProjects/MyNotes/app/src/main/res/layout/support_action_bar.xml" value="0.21965811965811965" />
       </map>
     </option>
   </component>

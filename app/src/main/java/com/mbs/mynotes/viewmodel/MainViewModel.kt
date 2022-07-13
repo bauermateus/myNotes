@@ -15,5 +15,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun getAllNotes() {
         listNotes.value = repository.getAllNotes()
     }
-
+    fun delete(id: Int) {
+        repository.delete(id)
+    }
 }
