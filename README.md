@@ -11,4 +11,9 @@
  </p> <br>
  <h2><b>SQLite:</b></h2> <br> <p align="center">Principal banco de dados do android, usa a linguagem SQL. Foram usados recursos como inserir, ler, atualizar e remover.</p> <br>
 <p align="center"><img src="https://user-images.githubusercontent.com/11887846/179089357-d1199a28-6830-4161-a1ce-ca422f9d3095.png"
- alt="Foto inserir nota" align=middle></p>
+ alt="Foto inserir nota" align=middle></p> <br>
+ <h2><b>SearchView:</b></h2> <br> <p align="center">Barra de pesquisa que ordena as notas na lista conforme feita a pesquisa.</p> <br>
+<p align="center"><img src="https://user-images.githubusercontent.com/11887846/179090415-92c91ccd-b664-4fc4-a3a7-0b39ec128e0a.png"
+ alt="Foto SearchView" align=middle></p> <br>
+  <h2><b>MVVM:</b></h2> <br> <p align="center">A arquitetura atualmente mais usada no android, me baseei nela para dividir as responsabilidades de cada componente do software.</p>
+ 
