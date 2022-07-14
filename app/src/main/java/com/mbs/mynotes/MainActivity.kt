@@ -2,10 +2,14 @@ package com.mbs.mynotes
 
 import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.View
 import android.widget.SearchView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.drawable.toDrawable
+import androidx.core.graphics.toColor
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mbs.mynotes.adapter.ListAdapter
@@ -13,6 +17,8 @@ import com.mbs.mynotes.databinding.ActivityMainBinding
 import com.mbs.mynotes.db.DataBaseConstants
 import com.mbs.mynotes.listeners.OnNotesListener
 import com.mbs.mynotes.viewmodel.MainViewModel
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.math.absoluteValue
 
 
 class MainActivity : AppCompatActivity() {
@@ -64,12 +70,12 @@ class MainActivity : AppCompatActivity() {
                 .setTitle(getString(R.string.delete_confirmation))
                 .setNegativeButton(getString(R.string.negative_confirmation_string), null)
                 .setPositiveButton(getString(R.string.positive_confirmation_string),
-                    DialogInterface.OnClickListener( fun(_, _) {
+                    DialogInterface.OnClickListener(fun(_, _) {
                         viewModel.delete(id)
                         viewModel.getAllNotes()
                         blankListHandler()
                     }
-                ))
+                    ))
                 .show()
         }
     }
@@ -103,8 +109,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun blankListHandler() {
         if (viewModel.notes.value.isNullOrEmpty()) {
-            binding.container.text =
-                R.string.add_and_remove_help_message.toString()
+            binding.container.setText(R.string.add_and_remove_help_message)
         } else {
             binding.container.text = ""
         }
