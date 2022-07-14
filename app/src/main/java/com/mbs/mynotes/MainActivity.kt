@@ -3,7 +3,6 @@ package com.mbs.mynotes
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.SearchView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -11,8 +10,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mbs.mynotes.adapter.ListAdapter
 import com.mbs.mynotes.databinding.ActivityMainBinding
+import com.mbs.mynotes.db.DataBaseConstants
 import com.mbs.mynotes.listeners.OnNotesListener
 import com.mbs.mynotes.viewmodel.MainViewModel
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -39,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         adapter.setListener(listener)
 
         searchBarManagement()
-        binding.searchBar.onWindowFocusChanged(false)
     }
 
     override fun onResume() {
@@ -55,17 +55,17 @@ class MainActivity : AppCompatActivity() {
     private val listener = object : OnNotesListener {
         override fun onClick(id: Int) {
             val intent = Intent(applicationContext, InsertActivity::class.java)
-            intent.putExtra("id", id)
+            intent.putExtra(DataBaseConstants.ID, id)
             startActivity(intent)
         }
 
         override fun onDelete(id: Int) {
             AlertDialog.Builder(this@MainActivity)
-                .setTitle("Apagar este item?")
-                .setMessage("Apagar este item?")
-                .setNegativeButton("Não", null)
-                .setPositiveButton("Sim", DialogInterface.OnClickListener(
-                    fun(_, _) {
+                .setTitle(getString(R.string.delete_confirmation))
+                .setMessage(R.string.delete_confirmation)
+                .setNegativeButton(getString(R.string.negative_confirmation_string), null)
+                .setPositiveButton(getString(R.string.positive_confirmation_string),
+                    DialogInterface.OnClickListener( fun(_, _) {
                         viewModel.delete(id)
                         viewModel.getAllNotes()
                         blankListHandler()
@@ -101,10 +101,11 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
     private fun blankListHandler() {
         if (viewModel.notes.value.isNullOrEmpty()) {
-            binding.container.text = "Ainda não há notas. \n\n• Para criar uma nota, toque no botão '+'." +
-                    " \n• Para deletar uma nota, pressione e segure sobre ela."
+            binding.container.text =
+                R.string.add_and_remove_help_message.toString()
         } else {
             binding.container.text = ""
         }

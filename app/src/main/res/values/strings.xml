@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MyNotes</string>
+    <string name="add_note_content_description">add_note</string>
+    <string name="search_bar_hint">Pesquisar uma nota...</string>
+    <string name="placeholder_title">Title</string>
+    <string name="placeholder_content">Content</string>
+    <string name="delete_confirmation">Apagar este item?</string>
+    <string name="negative_confirmation_string">Não</string>
+    <string name="positive_confirmation_string">Sim</string>
+    <string name="add_and_remove_help_message">Sim</string>
+    <string name="fill_all_fields_string">É necessário preencher todos os campos.</string>
+    <string name="must_fill_all_fields_string">Por favor, preencha Título e Conteúdo.</string>
 </resources>

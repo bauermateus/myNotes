@@ -14,14 +14,10 @@ class NotesViewHolder(private val bind: RecyclerContentBinding, private val list
     fun bind(note: NotesModel) {
         bind.title.text = note.title
         bind.content.text = note.content
-        bind.content.setOnClickListener {
+        bind.cardview.setOnClickListener {
             listener.onClick(note.id!!)
         }
-        bind.content.setOnLongClickListener {
-            listener.onDelete(note.id!!)
-            true
-        }
-        bind.title.setOnLongClickListener {
+        bind.cardview.setOnLongClickListener {
             listener.onDelete(note.id!!)
             true
         }
