@@ -15,5 +15,5 @@
  <h2><b>SearchView:</b></h2> <br> <p align="center">Barra de pesquisa que ordena as notas na lista conforme feita a pesquisa.</p> <br>
 <p align="center"><img src="https://user-images.githubusercontent.com/11887846/179090415-92c91ccd-b664-4fc4-a3a7-0b39ec128e0a.png"
  alt="Foto SearchView" align=middle></p> <br>
-  <h2><b>MVVM:</b></h2> <br> <p align="center">A arquitetura atualmente mais usada no android, me baseei nela para dividir as responsabilidades de cada componente do software.</p>
+  <h2><b>MVVM:</b></h2> <br> <p align="center">A arquitetura atualmente mais usada no android, me baseei nela para separar as responsabilidades de cada componente do software.</p>
  
