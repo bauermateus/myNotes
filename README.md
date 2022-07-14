@@ -6,6 +6,6 @@
  <p align="center">O app foi criado para colocar em prática habilidades adquiridas em meus estudos em kotlin e android.</p><br>
  <h1>Alguns dos recursos que usei nesse app, foram:</h1> <br>
  <h2><b>RecyclerView:</b></h2> <br> <p align="center">Listagem de itens de forma moderna, de forma a aumentar desempenho em relação a opções mais antigas como ListView.</p> <br>
- <img src="https://user-images.githubusercontent.com/11887846/179085833-a3b2e5df-086f-47d9-8e1c-2fd84e28b17c.png"
+ <p align="center"><img src="https://user-images.githubusercontent.com/11887846/179085833-a3b2e5df-086f-47d9-8e1c-2fd84e28b17c.png"
  alt="Foto RecyclerView" align=middle></p>
  </p>
