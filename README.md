@@ -4,8 +4,11 @@
  alt="Foto da tela inicial" align=middle></p> <br>
 
  <p align="center">O app foi criado para colocar em prática habilidades adquiridas em meus estudos em kotlin e android.</p><br>
- <h1>Alguns dos recursos que usei nesse app, foram:</h1> <br>
+ <h1>Abaixo, alguns dos recursos que usei nesse app.</h1> <br>
  <h2><b>RecyclerView:</b></h2> <br> <p align="center">Listagem de itens de forma moderna, de forma a aumentar desempenho em relação a opções mais antigas como ListView.</p> <br>
  <p align="center"><img src="https://user-images.githubusercontent.com/11887846/179085833-a3b2e5df-086f-47d9-8e1c-2fd84e28b17c.png"
  alt="Foto RecyclerView" align=middle></p>
- </p>
+ </p> <br>
+ <h2><b>Sqlite:</b></h2> <br> <p align="center">Principal banco de dados do android, usa a linguagem SQL. Foram usados recursos como inserir, ler, atualizar e remover.</p> <br>
+<p align="center"><img src=""
+ alt="Foto inserir nota" align=middle></p>
