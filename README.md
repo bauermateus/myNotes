@@ -10,5 +10,5 @@
  alt="Foto RecyclerView" align=middle></p>
  </p> <br>
  <h2><b>Sqlite:</b></h2> <br> <p align="center">Principal banco de dados do android, usa a linguagem SQL. Foram usados recursos como inserir, ler, atualizar e remover.</p> <br>
-<p align="center"><img src=""
+<p align="center"><img src="https://user-images.githubusercontent.com/11887846/179089357-d1199a28-6830-4161-a1ce-ca422f9d3095.png"
  alt="Foto inserir nota" align=middle></p>
