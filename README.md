@@ -9,6 +9,6 @@
  <p align="center"><img src="https://user-images.githubusercontent.com/11887846/179085833-a3b2e5df-086f-47d9-8e1c-2fd84e28b17c.png"
  alt="Foto RecyclerView" align=middle></p>
  </p> <br>
- <h2><b>Sqlite:</b></h2> <br> <p align="center">Principal banco de dados do android, usa a linguagem SQL. Foram usados recursos como inserir, ler, atualizar e remover.</p> <br>
+ <h2><b>SQLite:</b></h2> <br> <p align="center">Principal banco de dados do android, usa a linguagem SQL. Foram usados recursos como inserir, ler, atualizar e remover.</p> <br>
 <p align="center"><img src="https://user-images.githubusercontent.com/11887846/179089357-d1199a28-6830-4161-a1ce-ca422f9d3095.png"
  alt="Foto inserir nota" align=middle></p>
