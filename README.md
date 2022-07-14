@@ -5,7 +5,7 @@
 
  <p align="center">O app foi criado para colocar em prática habilidades adquiridas em meus estudos em kotlin e android.</p><br>
   <h2><b>Execução:</b></h2>
-<p><b> Para executá-lo, basta fazer o download na aba "releases" e instalar no seu dispositivo android.</b></p> <br>
+<p><b> Para executá-lo, basta fazer o <a href="https://github.com/bauermateus/myNotes/releases/download/android/mynotes.apk">download</a> e instalar no seu dispositivo android.</b></p> <br>
  <h1>Abaixo, alguns dos recursos que usei nesse app.</h1> <br>
  <h2><b>RecyclerView:</b></h2> <br> <p align="center">Listagem de itens de forma moderna, de forma a aumentar desempenho em relação a opções mais antigas como ListView.</p> <br>
  <p align="center"><img src="https://user-images.githubusercontent.com/11887846/179085833-a3b2e5df-086f-47d9-8e1c-2fd84e28b17c.png"
