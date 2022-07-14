@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity() {
         override fun onDelete(id: Int) {
             AlertDialog.Builder(this@MainActivity)
                 .setTitle(getString(R.string.delete_confirmation))
-                .setMessage(R.string.delete_confirmation)
                 .setNegativeButton(getString(R.string.negative_confirmation_string), null)
                 .setPositiveButton(getString(R.string.positive_confirmation_string),
                     DialogInterface.OnClickListener( fun(_, _) {
