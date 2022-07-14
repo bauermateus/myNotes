@@ -4,7 +4,7 @@
  alt="Foto da tela inicial" align=middle></p> <br>
 
  <p align="center">O app foi criado para colocar em prática habilidades adquiridas em meus estudos em kotlin e android.</p><br>
- <br><br><br><br> <h2><b>Execução:</b></h2>
+  <h2><b>Execução:</b></h2>
 <p><b> Para executá-lo, basta fazer o download na aba "releases" e instalar no seu dispositivo android.</b></p> <br>
  <h1>Abaixo, alguns dos recursos que usei nesse app.</h1> <br>
  <h2><b>RecyclerView:</b></h2> <br> <p align="center">Listagem de itens de forma moderna, de forma a aumentar desempenho em relação a opções mais antigas como ListView.</p> <br>
