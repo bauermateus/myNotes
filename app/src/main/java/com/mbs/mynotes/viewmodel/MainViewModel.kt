@@ -11,7 +11,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val repository = NotesRepository.getInstance(application)
     private val listNotes = MutableLiveData<List<NotesModel>>()
     val notes: LiveData<List<NotesModel>> = listNotes
-
     fun getAllNotes() {
         listNotes.value = repository.getAllNotes()
     }

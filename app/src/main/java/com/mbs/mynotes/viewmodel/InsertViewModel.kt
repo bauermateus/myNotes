@@ -25,6 +25,4 @@ class InsertViewModel(application: Application) : AndroidViewModel(application) 
     fun delete(id: Int) {
         repository.delete(id)
     }
-
-
 }

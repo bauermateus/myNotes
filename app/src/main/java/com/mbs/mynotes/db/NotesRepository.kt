@@ -5,7 +5,7 @@ import android.content.ContentValues
 import android.content.Context
 import com.mbs.mynotes.model.NotesModel
 
-class NotesRepository private constructor(private val context: Context) {
+class NotesRepository private constructor(context: Context) {
 
     private val notesDataBase = NotesDataBase(context)
 
@@ -69,7 +69,6 @@ class NotesRepository private constructor(private val context: Context) {
         }
     }
 
-    @SuppressLint("Range")
     fun getAllNotes(): List<NotesModel> {
         val list = mutableListOf<NotesModel>()
         try {
